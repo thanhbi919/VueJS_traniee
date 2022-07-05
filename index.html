@@ -1,22 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
 
-    <title>Document</title>
-</head>
-<body>
-    <header><h1>Header</h1></header>
-    <div class="list-blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, molestias neque blanditiis, ab aliquid provident assumenda fugit a voluptatibus at deleniti saepe distinctio repudiandae, harum dolores odio. Doloremque, culpa omnis.
+    <!DOCTYPE html>
+    <html lang="en">
 
-    </div>
-    <div id="app">
-       <h1>{{title}}</h1> 
-       <h2>{{say('World')}}</h2>
-    </div>
-</body>
-<script src="main.js"></script>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+
+        <title>Document</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Header</h1>
+        </header>
+        <div class="list-blog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, molestias neque blanditiis,
+            ab aliquid provident assumenda fugit a voluptatibus at deleniti saepe distinctio repudiandae, harum dolores
+            odio. Doloremque, culpa omnis.
+
+        </div>
+        <div id="app">
+            <h1>
+                <a v-bind:href="url" target="target">{{title}}</a>
+            </h1>
+            <h2>{{say('World')}}</h2>
+            <h3> Price : {{formatPrice()}}</h3>
+        </div>
+    </body>
+    <script src="main.js"></script>
+
+    </html>
