@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
-
+    <style>
+    .box{
+        width:200px;
+        height:200px;
+        background-color:red;
+    }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -14,9 +20,15 @@
 
     </div>
     <div id="app">
-       <h1>{{title}}</h1> 
-       <h2>{{say('World')}}</h2>
+       
+       <h1>Counter: {{x}}</h1>
+       <button v-on:click = "handleClick($event,5)">Click me</button>
+        <div class="box" v-on:mousemove = "handleMousemove($event)">
+            <h1>ClientX : {{clientX}}</h1>
+            <h1>ClientY : {{clientY}}</h1>
+        </div>
     </div>
+
 </body>
 <script src="main.js"></script>
 </html>

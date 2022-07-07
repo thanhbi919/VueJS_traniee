@@ -1,17 +1,24 @@
 var vueInstance = new Vue({
     el: '#app',
     data: {
-        title: 'Dien thoai Samsung',
+        x: 5,
+        clientX: 0,
+        clientY: 0,
     },
+    
     methods: {
-        say:function(text){
-            return 'Hello'+text;
+        handleClick(e,x){
+            console.log('click',e);
+            this.x++;
+        },
+        handleMousemove(e){
+            console.log('mousemove',e);
+            this.clientX= e.clientX;
+            this.clientY= e.clientY;
         }
+
     }
 });
 //Reactivity
 console.log(vueInstance);
 
-setTimeout(() => {
-    vueInstance.title = 'Dien thoai Nokia';
-},3000);
